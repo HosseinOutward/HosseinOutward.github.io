@@ -4,8 +4,8 @@
   --o1:15px; /* offest of lines*/
   --o2:10px; /* offset of rectangle */
 
-  width:150px;
-  height:200px;
+  width:auto;
+  height:auto;
   box-sizing:border-box;
   display:inline-block;
   border:var(--o1) solid transparent;
