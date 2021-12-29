@@ -1,0 +1,22 @@
+.box {
+  --c:red;   /* color */
+  --b:2px;   /* thickness of lines */
+  --o1:15px; /* offest of lines*/
+  --o2:10px; /* offset of rectangle */
+
+  width:150px;
+  height:200px;
+  box-sizing:border-box;
+  display:inline-block;
+  border:var(--o1) solid transparent;
+  outline:var(--b) solid var(--c);
+  outline-offset:calc(-1*var(--o2));
+  background:
+    linear-gradient(var(--c) 0 0) top,
+    linear-gradient(var(--c) 0 0) left,
+    linear-gradient(var(--c) 0 0) bottom,
+    linear-gradient(var(--c) 0 0) right;
+  background-size:200% var(--b),var(--b) 200%;
+  background-origin:padding-box;
+  background-repeat:no-repeat;
+}
