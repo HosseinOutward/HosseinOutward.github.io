@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 <head>
     <meta charset="UTF-8">
@@ -8,32 +11,33 @@
 </head>
     
 <body>
-    <div style="font-family: TabacGlam,sans-serif;">
+    <div>
         work in progress
     </div>
 
 
     <main class="main">
-
-        <a class="button" href="https://i.imgur.com/xUg5gER.jpg" target="_blank" rel="noopener noreferrer">
+        <a class="button" href="" target="_blank" rel="noopener noreferrer">
             <div class="button__ornament button__ornament--vertical">
                 <div class="button__ornament-top-bottom"></div>
                 <div class="button__ornament-left-right"></div>
             </div>
-
             <div class="button__ornament button__ornament--horisontal">
                 <div class="button__ornament-top-bottom"></div>
                 <div class="button__ornament-left-right"></div>
             </div>
-
             <span class="button__label">cheers</span>
         </a>
-
     </main>
+
 </body>
     
 <script>
-    // window.location.href = "https://github.com/HosseinOutward";
+    var bodyHeight = document.body.clientHeight;
+    var vhbodyHeight = bodyHeight * (100 / document.documentElement.clientHeight)+4.3;
+    $(document).ready(function () {
+        document.styleSheets[0].addRule('body:after','height: '+vhbodyHeight+'vh;');
+    });
 </script>
     
 </html>
