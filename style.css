@@ -5,19 +5,21 @@
 
 body {
     --brass: #b6a644;
-    background: #000;
+    --border-size: 0.4vh;
+    background: #000000;
     color: var(--brass);
     font-family: "Tabac", sans-serif;
     text-align: center;
 
-    border: 3px solid var(--brass);
+    border: var(--border-size) solid var(--brass);
     margin: 3vh 1vh;
+    min-height: 92vh;
     height: 97%;
 }
 
 body:after {
     content: "";
-    border: 3px solid var(--brass);
+    border: var(--border-size) solid var(--brass);
     position: absolute;
 
     top: 1vh;
@@ -26,30 +28,12 @@ body:after {
     z-index: -1;
 }
 
-.artdeco-box {
-    --c: var(--brass); /* color */
-    --b: 2px; /* thickness of lines */
-    --o1: 15px; /* offest of lines*/
-    --o2: 10px; /* offset of rectangle */
-
-    padding: 1rem;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-    display: inline-block;
-    border: var(--o1) solid transparent;
-    outline: var(--b) solid var(--c);
-    outline-offset: calc(-1 * var(--o2));
-    background: linear-gradient(var(--c) 0 0) top, linear-gradient(var(--c) 0 0) left,
-    linear-gradient(var(--c) 0 0) bottom, linear-gradient(var(--c) 0 0) right;
-    background-size: 200% var(--b), var(--b) 200%;
-    background-origin: padding-box;
-    background-repeat: no-repeat;
-}
-
 .main {
     display: flex;
-    height: 100vh;
+    height: 8.5vh;
+    /*padding: 2vh;*/
+    width: 250px;
+    scale: 60%;
     justify-content: center;
     align-items: center;
 }
@@ -57,12 +41,12 @@ body:after {
 .button {
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    font-size: 1em;
+    font-size: 1.2em;
     position: relative;
     text-decoration: none;
     padding: 0.5em;
     box-shadow: inset 0 0 0 1px #e0c351;
-    min-width: 340px;
+    min-width: 250px;
     text-align: center;
 }
 .button__label {

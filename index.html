@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+<link rel="stylesheet" href="style.css">
+
 <head>
     <meta charset="UTF-8">
     <title>HosseinOutward</title>
 </head>
-    
+
 <body>
-    <div>
-        work in progress
+<div class="row">
+    <div class="col-3">
+        <nav class="navbar">
+            <ul class="navbar-nav">
+
+            </ul>
+        </nav>
     </div>
 
+    <div class="col-9">
+        <div class="container">
+            Work in progress.
+        </div>
+        <div class="container">
+            <p>
+                a lot is still desired.
+            </P>
+        </div>
+    </div>
+</div>
 
-    <main class="main">
-        <a class="button" href="" target="_blank" rel="noopener noreferrer">
-            <div class="button__ornament button__ornament--vertical">
-                <div class="button__ornament-top-bottom"></div>
-                <div class="button__ornament-left-right"></div>
-            </div>
-            <div class="button__ornament button__ornament--horisontal">
-                <div class="button__ornament-top-bottom"></div>
-                <div class="button__ornament-left-right"></div>
-            </div>
-            <span class="button__label">cheers</span>
-        </a>
-    </main>
 
 </body>
-    
+
 <script>
-    var bodyHeight = document.body.clientHeight;
-    var vhbodyHeight = bodyHeight * (100 / document.documentElement.clientHeight)+4.3;
+    function button(name) {
+        return '' +
+            '<li class="navbar main">\n' +
+            '        <a class="button" href="" rel="noopener noreferrer">\n' +
+            '            <div class="button__ornament button__ornament--vertical">\n' +
+            '                <div class="button__ornament-top-bottom"></div>\n' +
+            '                <div class="button__ornament-left-right"></div>\n' +
+            '            </div>\n' +
+            '            <div class="button__ornament button__ornament--horisontal">\n' +
+            '                <div class="button__ornament-top-bottom"></div>\n' +
+            '                <div class="button__ornament-left-right"></div>\n' +
+            '            </div>\n' +
+            '            <span class="button__label">' + name + '</span>\n' +
+            '        </a>\n' +
+            '    </div>';
+    }
+
     $(document).ready(function () {
-        document.styleSheets[0].addRule('body:after','height: '+vhbodyHeight+'vh;');
+        var bodyHeight = document.body.clientHeight;
+        var vhbodyHeight = bodyHeight * (100 / document.documentElement.clientHeight) + 4.8;
+        document.styleSheets[0].addRule('body:after', 'height: ' + vhbodyHeight + 'vh;');
+
+        ["CV","Projects"].forEach(item => $('ul').append(button(item)));
     });
 </script>
-    
+
 </html>
